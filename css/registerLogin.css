@@ -25,10 +25,17 @@ body {
 }
 
 #form .header h1{
+     color: #993333;
+     font-size: 45px;
+     font-weight: bold;
+     margin-bottom: 10px;
+ }
+
+#login .header h1{
     color: #993333;
     font-size: 30px;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 #form .inputs input[type=email], input[type=password], input[type=text] {
@@ -77,4 +84,23 @@ body {
     display: table;
     position: static;
     clear: both;
+}
+
+.login {
+    max-width: 400px;
+    padding: 15px 35px 45px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.login input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.login input[type="password"] {
+    margin-bottom: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
