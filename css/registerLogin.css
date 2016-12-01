@@ -104,3 +104,21 @@ body {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
+.login input[type="submit"]{
+    width: 80%;
+    margin-top: 20px;
+    margin-left: 40px;
+    padding: 15px 0;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+    background: #b9c5dd;
+    border-radius: 5px;
+    border: 1px solid #737b8d;
+    display: table;
+    position: static;
+    clear: both;
+}

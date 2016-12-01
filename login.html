@@ -4,19 +4,31 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="css/registerLogin.css">
+
+    <script type="text/javascript">
+
+        function login(){
+            var name = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if(name != "abc" && password != "123"){
+                alert("Invalid username, password");
+            }else{
+                window.location.href = "index.html";
+                return false;
+            }
+        }
+    </script>
 </head>
 <body>
 <div class="container">
-    <form id="login" class="login">
+    <form id="login" class="login" onsubmit="return login()">
         <div class="header">
             <h1>Login</h1>
         </div>
-        <input type="text" class="form-control" name="username" placeholder="User Name" required="" />
-        <input type="password" class="form-control" name="password" placeholder="Password" required=""/>
+        <input type="text" id="username" name="username" placeholder="User Name" required="required" />
+        <input type="password" id="password" name="password" placeholder="Password" required="required"/>
         <br/>
-        <label class="checkbox">
             <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
-        </label>
         <br/>
         <br/>
         <input id="submit" type="submit" value="Login">
