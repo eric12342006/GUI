@@ -30,6 +30,7 @@
 
         <hr size="2" width="100%">
 
+        <div class="inputs">
         Username:<input id="name" type="text" name="name" required="required">
         <br/>
         <br/>
@@ -39,10 +40,11 @@
         ConfirmPassword:<input id="confirm_password" type="password" name="confirm_password" required="required" onchange="checkPassword()">
         <br/>
         <br/>
-        Email:<input id="email" type="text" name="email" required="required">
+        Email:<input id="email" type="email" name="email" required="required">
         <br/>
         <br/>
-        <input type="submit" value="Submit" onclick="register()">  <input type="reset" value="reset"></p>
+        <input id="submit" type="submit" value="Submit" onclick="register()">  <input id="reset" type="reset" value="Reset"></p>
+        </div>
     </form>
 </div>
 </body>
