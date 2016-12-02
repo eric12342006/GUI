@@ -1,9 +1,42 @@
 /**
  * Created by tmnb02 on 2/12/2016.
  */
-
 $(document).ready(function(){
     $(".catbtn").click(function(){
-        $("img").attr("src","textbook/textbk1.jpg");
+        $("#img1").attr("src","Novels/bk1.jpg");
+        $("#img2").attr("src","Novels/bk2.jpg");
+        $("#img3").attr("src","Novels/bk3.jpg");
+        $("#img4").attr("src","Novels/bk4.jpg");
+        $("#img5").attr("src","Novels/bk5.jpg");
+        $("#img6").attr("src","Novels/bk6.jpg");
+        $("#img7").attr("src","Novels/bk7.jpg");
+        $("#img8").attr("src","Novels/bk8.jpg");
+        $("#bk1").attr("href","detail.html?bk=novel1");
+    });
+});
+
+$(document).ready(function(){
+    $(".catbtn1").click(function(){
+        $("#img1").attr("src","textbook/textbk1.jpg");
+        $("#img2").attr("src","textbook/textbook2.jpg");
+        $("#img3").attr("src","textbook/textbook3.jpg");
+        $("#img4").attr("src","textbook/textbook4.jpg");
+        $("#img5").attr("src","textbook/textbook5.jpg");
+        $("#img6").attr("src","textbook/textbook6.jpg");
+        $("#img7").attr("src","textbook/textbook7.jpg");
+        $("#img8").attr("src","textbook/textbook8.jpg");
+    });
+});
+
+$(document).ready(function(){
+    $(".catbtn2").click(function(){
+        $("#img1").attr("src","Travels/bk1.jpg");
+        $("#img2").attr("src","Travels/bk2.jpg");
+        $("#img3").attr("src","Travels/bk3.jpg");
+        $("#img4").attr("src","Travels/bk4.jpg");
+        $("#img5").attr("src","Travels/bk5.jpg");
+        $("#img6").attr("src","Travels/bk6.jpg");
+        $("#img7").attr("src","Travels/bk7.jpg");
+        $("#img8").attr("src","Travels/bk8.jpg");
     });
 });

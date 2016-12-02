@@ -395,6 +395,34 @@ tr:nth-child(even) {
     width: auto;
     position: relative;
 }
+.catbtn1{
+    display: inline-block;
+    opacity: 0.6;
+    border: none;
+    color: #000000;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    height: auto;
+    width: auto;
+    position: relative;
+}
+.catbtn2{
+    display: inline-block;
+    opacity: 0.6;
+    border: none;
+    color: #000000;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    height: auto;
+    width: auto;
+    position: relative;
+}
 
 
 .button {
@@ -451,15 +479,35 @@ tr:nth-child(even) {
     background-color:grey;
     width:80%;
     margin: auto;
+    text-align: center;
 }
 .catbookdetail img{
     padding: 10px;
     height:350px;
     text-align: center;
     margin:0px auto;
-
 }
+#img1{ }
+#img2{ }
+#img3{ }
+#img4{ }
+#img5{ }
+#img6{ }
+#img7{ }
+#img8{ }
+
+#bk1{}
+#bk2{}
+#bk3{}
+#bk4{}
+#bk5{}
+#bk6{}
+#bk7{}
+#bk8{}
 
 .catbookdetail img:hover{
     opacity: 0.5;
+}
+#test{
+
 }
