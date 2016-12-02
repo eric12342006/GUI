@@ -395,6 +395,9 @@ tr:nth-child(even) {
     width: auto;
     position: relative;
 }
+
+
+
 .catbtn1{
     display: inline-block;
     opacity: 0.6;
@@ -451,6 +454,8 @@ tr:nth-child(even) {
     padding-top: 80px;
 
 }
+
+
 #itemdetail{
     background-color: #F7F7F7;
     margin: 0px auto;

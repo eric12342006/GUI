@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/detail.css">
     <script src="js/jquery.js"></script>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="js/Detail.js"></script>
     <script>
-        function load() {
-            var mydata = JSON.parse(User1);
-            alert("User1:"+mydata[0].ac);
-            alert("PWD:"+mydata[0].pwd);
+        function check() {
+            var myParam = location.search.split('bk=')[1];
+            document.getElementById("bk1").setAttribute("src", myParam);
         }
+
     </script>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 
-<body onload="load()">
-<h1>唔Lan識做....我唔知點get返個書名返黎 求教學</h1>
+<body onload="check()">
+<div id="itemdiv">
+    <button class="catbtn">About us</button>
+    <button class="catbtn1">Home</button>
+    <button class="catbtn2">Travels</button>
+    <hr size="2" width="100%" >
+</div>
+
+
+<div class="container">
+    <div id="item">
+        <img src="" id="bk1">asas
+    </div>
+    <div id="description">
+    </div>
+
+</div>
+
 
 </body>
 </html>
