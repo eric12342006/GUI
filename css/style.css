@@ -255,7 +255,6 @@ max-height:100%;
 .cover-btn {
   display: inline-block;
   opacity: 0.6;
-  
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -355,18 +354,46 @@ tr:nth-child(even) {
 
 
 #banner {
-    background-color: #00cdcf;
+    background: url("../img/12.png") ;
     color: #ffffff;
     padding: 220px 0  0;
     text-align: center;
     height: 660px;
     width: auto;
+    opacity: 0.9;
+    border-color: #323232;
+
+    
 }
 #banner table{
-    width: 40%;
-    border-color: #FFFFFF;
+    width: 50%;
+    opacity: 0.9;
+    background-color: #323232 ;
+
     margin: 0px auto;
     text-align: center;
+    font-size: 40px;
+
+}
+#banner table tr td{
+    border: none;
+    text-align: center;
+
+}
+
+.catbtn{
+    display: inline-block;
+    opacity: 0.6;
+    border: none;
+    color: #000000;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    height: auto;
+    width: auto;
+    position: relative;
 }
 
 
@@ -398,6 +425,41 @@ tr:nth-child(even) {
 }
 #itemdetail{
     background-color: #F7F7F7;
+    margin: 0px auto;
+    text-align: center;
+    position: absolute;
+}
 
 
+.item00{
+    float: left;
+    width:350px;
+    height:300px;
+    background-color: RED;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.item01{
+    float: left;
+    width:250px;
+    height:200px;
+    background-color: #402b18;
+    margin-left: 10px;
+}
+.catbookdetail{
+    height: 750px;
+    background-color:grey;
+    width:80%;
+    margin: auto;
+}
+.catbookdetail img{
+    padding: 10px;
+    height:350px;
+    text-align: center;
+    margin:0px auto;
+
+}
+
+.catbookdetail img:hover{
+    opacity: 0.5;
 }
