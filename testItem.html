@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Item</title>
+    <script type="text/javascript">
+        function addToCart() {
+            var cart = {};
+
+            cart.Name = document.getElementById("product1Name").value;
+            cart.Price = document.getElementById("product1Price").value;
+
+            var shoppingCart;
+            shoppingCart.push(cart);
+            alert(shoppingCart[0]);
+
+
+            displayShoppingCart(shoppingCart);
+        }
+
+        function displayShoppingCart(shoppingCart) {
+            alert(shoppingCart[0]);
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Book1<input type="hidden" id="product1Name" value="Book1"></td>
+            <td>$1000<input type="hidden" id="product1Price" value="1000"></td>
+            <td><input id="addToCart" type="submit" value="Add To Cart"/></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,9 +1,11 @@
 
 .bodyBG{
     background: url(../img/Registerbg.jpg) no-repeat center center fixed;
-
-    font-family: "Helvetica Neue", Helvetica, Arial;
-    padding-top: 20px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family:"font-awesome";
 }
 
 .container {
