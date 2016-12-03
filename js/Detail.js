@@ -4,6 +4,7 @@
 
 User1 = '[{"ac" : "abc", "pwd" : "123"}]';
 
-JData = [{ name: "Wing", age: "20", height: "182" },
-         { name: "Wind", age: "18", height: "165" },
-         { name: "Edge", age: "25", height: "171" }]
+txt = '{"BookDes":[' +
+    '{"BkType":"TB1","Bookname":"iOS SDK Programming","Editor":"James Brannan, Blake Ward","Price":"304" },' +
+    '{"BkType":"TB2","Bookname":"Programming in objective-c 2.0","Editor":"Gary Rosenzweig","Price":"400" },' +
+    '{"BkType":"TB3","Bookname":"IELTS 10","Editor":"Cambridge English","Price":"209" }]}';

@@ -3,12 +3,33 @@
 <head>
     <link rel="stylesheet" href="css/detail.css">
     <script src="js/jquery.js"></script>
+
+    <script src="js/Detail.js"></script>
+
     <script src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="js/Detail.js"></script>
     <script>
+        var BKName;
+        var edit;
+        var price;
         function check() {
-            var myParam = location.search.split('bk=')[1];
-            document.getElementById("bk1").setAttribute("src", myParam);
+            var getSrc = location.search.split("&")[0].replace("?","").split("=")[1];
+            var getBT = location.search.split("&")[1].replace("?","").split("=")[1];
+
+            document.getElementById("bk1").setAttribute("src", getSrc);
+            var jsonData = JSON.parse(txt);
+            for (var i = 0; i < jsonData.BookDes.length; i++) {
+                var counter = jsonData.BookDes[i];
+                if(counter.BkType=getBT){
+                   BKName="Name: "+counter.Bookname;
+                   edit="Editor: "+counter.Editor;
+                   price="Price: "+counter.Price;
+                   document.getElementById("DesName").innerHTML=BKName;
+                   document.getElementById("DesEdit").innerHTML=edit;
+                   document.getElementById("DesPrice").innerHTML=price;
+                    break;
+                }
+            }
         }
 
     </script>
@@ -27,9 +48,12 @@
 
 <div class="container">
     <div id="item">
-        <img src="" id="bk1">asas
+        <img src="" id="bk1">
     </div>
     <div id="description">
+        <p id="DesName"> </p>
+        <p id="DesEdit"> </p>
+        <p id="DesPrice"> </p>
     </div>
 
 </div>

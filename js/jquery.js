@@ -34,7 +34,8 @@ $(document).ready(function(){
         $("#img7").attr("src","textbook/textbook7.jpg");
         $("#img8").attr("src","textbook/textbook8.jpg");
 
-        $("#bk1").attr("href","detail.html?bk=textbook/textbook1.jpg");
+        $("#bk1").attr("href","detail.html?bk=textbook/textbook1.jpg&BT=TB1");
+        // $("#bk1").attr("href","detail.html?bk=textbook/textbook1.jpg");
         $("#bk2").attr("href","detail.html?bk=textbook/textbook2.jpg");
         $("#bk3").attr("href","detail.html?bk=textbook/textbook3.jpg");
         $("#bk4").attr("href","detail.html?bk=textbook/textbook4.jpg");
