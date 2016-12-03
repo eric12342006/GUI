@@ -12,14 +12,14 @@ $(document).ready(function(){
         $("#img7").attr("src","Novels/bk7.jpg");
         $("#img8").attr("src","Novels/bk8.jpg");
 
-        $("#bk1").attr("href","detail.html?bk=Novels/bk1.jpg");
-        $("#bk2").attr("href","detail.html?bk=Novels/bk2.jpg");
-        $("#bk3").attr("href","detail.html?bk=Novels/bk3.jpg");
-        $("#bk4").attr("href","detail.html?bk=Novels/bk4.jpg");
-        $("#bk5").attr("href","detail.html?bk=Novels/bk5.jpg");
-        $("#bk6").attr("href","detail.html?bk=Novels/bk6.jpg");
-        $("#bk7").attr("href","detail.html?bk=Novels/bk7.jpg");
-        $("#bk8").attr("href","detail.html?bk=Novels/bk8.jpg");
+        $("#bk1").attr("href","detail.html?bk=Novels/bk1.jpg&BT=N1");
+        $("#bk2").attr("href","detail.html?bk=Novels/bk2.jpg&BT=N2");
+        $("#bk3").attr("href","detail.html?bk=Novels/bk3.jpg&BT=N3");
+        $("#bk4").attr("href","detail.html?bk=Novels/bk4.jpg&BT=N4");
+        $("#bk5").attr("href","detail.html?bk=Novels/bk5.jpg&BT=N5");
+        $("#bk6").attr("href","detail.html?bk=Novels/bk6.jpg&BT=N6");
+        $("#bk7").attr("href","detail.html?bk=Novels/bk7.jpg&BT=N7");
+        $("#bk8").attr("href","detail.html?bk=Novels/bk8.jpg&BT=N8");
     });
 });
 
@@ -35,14 +35,13 @@ $(document).ready(function(){
         $("#img8").attr("src","textbook/textbook8.jpg");
 
         $("#bk1").attr("href","detail.html?bk=textbook/textbook1.jpg&BT=TB1");
-        // $("#bk1").attr("href","detail.html?bk=textbook/textbook1.jpg");
-        $("#bk2").attr("href","detail.html?bk=textbook/textbook2.jpg");
-        $("#bk3").attr("href","detail.html?bk=textbook/textbook3.jpg");
-        $("#bk4").attr("href","detail.html?bk=textbook/textbook4.jpg");
-        $("#bk5").attr("href","detail.html?bk=textbook/textbook5.jpg");
-        $("#bk6").attr("href","detail.html?bk=textbook/textbook6.jpg");
-        $("#bk7").attr("href","detail.html?bk=textbook/textbook7.jpg");
-        $("#bk8").attr("href","detail.html?bk=textbook/textbook8.jpg");
+        $("#bk2").attr("href","detail.html?bk=textbook/textbook2.jpg&BT=TB2");
+        $("#bk3").attr("href","detail.html?bk=textbook/textbook3.jpg&BT=TB3");
+        $("#bk4").attr("href","detail.html?bk=textbook/textbook4.jpg&BT=TB4");
+        $("#bk5").attr("href","detail.html?bk=textbook/textbook5.jpg&BT=TB5");
+        $("#bk6").attr("href","detail.html?bk=textbook/textbook6.jpg&BT=TB6");
+        $("#bk7").attr("href","detail.html?bk=textbook/textbook7.jpg&BT=TB7");
+        $("#bk8").attr("href","detail.html?bk=textbook/textbook8.jpg&BT=TB8");
     });
 });
 
@@ -57,14 +56,14 @@ $(document).ready(function(){
         $("#img7").attr("src","Travels/bk7.jpg");
         $("#img8").attr("src","Travels/bk8.jpg");
 
-        $("#bk1").attr("href","detail.html?bk=Travels/bk1.jpg");
-        $("#bk2").attr("href","detail.html?bk=Travels/bk2.jpg");
-        $("#bk3").attr("href","detail.html?bk=Travels/bk3.jpg");
-        $("#bk4").attr("href","detail.html?bk=Travels/bk4.jpg");
-        $("#bk5").attr("href","detail.html?bk=Travels/bk5.jpg");
-        $("#bk6").attr("href","detail.html?bk=Travels/bk6.jpg");
-        $("#bk7").attr("href","detail.html?bk=Travels/bk7.jpg");
-        $("#bk8").attr("href","detail.html?bk=Travels/bk8.jpg");
+        $("#bk1").attr("href","detail.html?bk=Travels/bk1.jpg&BT=Tr1");
+        $("#bk2").attr("href","detail.html?bk=Travels/bk2.jpg&BT=Tr2");
+        $("#bk3").attr("href","detail.html?bk=Travels/bk3.jpg&BT=Tr3");
+        $("#bk4").attr("href","detail.html?bk=Travels/bk4.jpg&BT=Tr4");
+        $("#bk5").attr("href","detail.html?bk=Travels/bk5.jpg&BT=Tr5");
+        $("#bk6").attr("href","detail.html?bk=Travels/bk6.jpg&BT=Tr6");
+        $("#bk7").attr("href","detail.html?bk=Travels/bk7.jpg&BT=Tr7");
+        $("#bk8").attr("href","detail.html?bk=Travels/bk8.jpg&BT=Tr8");
     });
 });
 

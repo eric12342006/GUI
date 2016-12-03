@@ -492,7 +492,7 @@ tr:nth-child(even) {
     text-align: center;
     margin:0px auto;
 }
-#img1{ }
+<!--#img1{ }
 #img2{ }
 #img3{ }
 #img4{ }
@@ -508,7 +508,7 @@ tr:nth-child(even) {
 #bk5{}
 #bk6{}
 #bk7{}
-#bk8{}
+#bk8{}-->
 
 .catbookdetail img:hover{
     opacity: 0.5;
