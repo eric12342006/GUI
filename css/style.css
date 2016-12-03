@@ -428,23 +428,7 @@ tr:nth-child(even) {
 }
 
 
-.button {
-    border: 1px solid #0a3c59;
-    background: #3e779d;
-    padding: 8.5px 17px;
-    border-radius: 2px;
-    width: 100px;
-    color: #06416c;
-    font-size: 15px;
-    font-family: helvetica, serif;
-    margin: 0px auto;
-}
-.button:hover {
-    border: 1px solid #402b18;
-    text-shadow: #06416c 0 1px 0;
-    background: #3e779d;
-    color: #ffffff;
-}
+
 
 #itemdiv{
     height: 100px;

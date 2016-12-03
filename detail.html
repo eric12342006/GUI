@@ -3,11 +3,8 @@
 <head>
     <link rel="stylesheet" href="css/detail.css">
     <link rel="stylesheet" href="css/style.css">
-
     <script src="js/jquery.js"></script>
-
     <script src="js/Detail.js"></script>
-
     <script src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="js/Detail.js"></script>
     <script>
@@ -25,7 +22,7 @@
                 if(counter.BkType==getBT){
                    BKName="Name: "+counter.Bookname;
                    edit="Editor: "+counter.Editor;
-                   price="Price: "+counter.Price;
+                   price="Price: $"+counter.Price;
                    document.getElementById("DesName").innerHTML=BKName;
                    document.getElementById("DesEdit").innerHTML=edit;
                    document.getElementById("DesPrice").innerHTML=price;
@@ -33,7 +30,6 @@
                 }
             }
         }
-
     </script>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -43,8 +39,8 @@
 
 <div id="itemdiv">
     <button class="catbtn">About us</button>
-    <button class="catbtn1">Home</button>
-    <button class="catbtn2">Back</button>
+    <button class="catbtn1" onclick="self.location.href='index.html'">Home</button>
+    <button class="catbtn2" onclick="self.location.href='Itemshow.html'">Back</button>
     <hr size="2" width="30%" >
 </div>
 <section class="search-bar">
@@ -57,7 +53,6 @@
 </section>
 <hr size="2" width="100%" >
 
-
 <div class="container">
     <div id="item">
         <img src="" id="bk1">
@@ -69,7 +64,6 @@
         <button class="catbtn" style="background-color: grey;padding:10px;color:black;">Get it now</button>
         <button class="catbtn" style="background-color: grey; padding:10px;color:black;">Shopping Cart</button>
     </div>
-
 </div>
 
 
