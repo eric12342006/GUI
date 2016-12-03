@@ -4,23 +4,50 @@
     <meta charset="UTF-8">
     <title>Test Item</title>
     <script type="text/javascript">
-        function addToCart() {
-            var cart = {};
+        var cart = [];
 
-            cart.Name = document.getElementById("product1Name").value;
-            cart.Price = document.getElementById("product1Price").value;
+        var Item = function(name, price, count){
+            this.name = name;
+            this.price = price;
+            this.count = count;
+        };
 
-            var shoppingCart;
-            shoppingCart.push(cart);
-            alert(shoppingCart[0]);
+        function test(){
+            var cart = [];
+            var abc = true;
 
-
-            displayShoppingCart(shoppingCart);
+                var a = new Item(document.getElementById("product1Name").value, document.getElementById("product1Price").value, 1);
+                var b = new Item(document.getElementById("product1Name").value, document.getElementById("product1Price").value, 1);
+                cart.push(a);
+                return cart;
         }
 
-        function displayShoppingCart(shoppingCart) {
-            alert(shoppingCart[0]);
+        function addItemToCart(name,price,count){
+            var item = new Item(name,price,count);
+            cart.push(item);
+            console.log(cart);
+            console.log(cart.length);
         }
+
+        function display(){
+            var cartCopy = [];
+            for (var i in cart){
+                var item = cart[i];
+                var itemCopy = {};
+                for (var p in item) {
+                    itemCopy[p] = item[p];
+                }
+                cartCopy.push(itemCopy);
+            }
+            return cartCopy;
+        }
+
+        function listCart() {
+            for (var i = 0; i < cart.length; i++) {
+                document.write("<tr><td>Name: " + cart[i].name+"</td><td>Price: " + cart[i].price +"</td></tr>");
+            }
+        }
+
     </script>
 </head>
 <body>
@@ -28,8 +55,17 @@
         <tr>
             <td>Book1<input type="hidden" id="product1Name" value="Book1"></td>
             <td>$1000<input type="hidden" id="product1Price" value="1000"></td>
-            <td><input id="addToCart" type="submit" value="Add To Cart"/></td>
+            <td><input id="addToCart1" type="button" value="Add To Cart" onclick="addItemToCart('Book1',1000,3)"/></td>
         </tr>
+        <tr>
+            <td>Book2<input type="hidden" id="product2Name" value="Book1"></td>
+            <td>$2000<input type="hidden" id="product2Price" value="1000"></td>
+            <td><input id="addToCart2" type="button" value="Add To Cart" onclick="addItemToCart('Book2',2000,4)"/></td>
+            <input type="button" value="test" onclick="listCart()">
+        </tr>
+        <tr>
+            <a href="testChangePage.html">Change Page</a>
+        </tr>>
     </table>
 </body>
 </html>
