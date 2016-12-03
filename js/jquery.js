@@ -68,3 +68,44 @@ $(document).ready(function(){
 });
 
 
+
+/*********************************/
+var cart = [];
+
+var Item = function(name, price, count){
+    this.name = name;
+    this.price = price;
+    this.count = count;
+};
+
+function addItemToCart(name,price,count){
+    var item = new Item(name,price,count);
+    cart.push(item);
+    console.log(cart);
+    console.log(cart.length);
+
+    saveCart();
+}
+
+function saveCart(){
+    localStorage.setItem("shoppingCart",JSON.stringify(cart));
+}
+
+function display(){
+    var cartCopy = [];
+    for (var i in cart){
+        var item = cart[i];
+        var itemCopy = {};
+        for (var p in item) {
+            itemCopy[p] = item[p];
+        }
+        cartCopy.push(itemCopy);
+    }
+    return cartCopy;
+}
+
+function listCart() {
+    cart =  JSON.parse(localStorage.getItem("shoppingCart"));
+    console.log(cart);
+}
+

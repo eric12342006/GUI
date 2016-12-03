@@ -3,52 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Test Item</title>
-    <script type="text/javascript">
-        var cart = [];
-
-        var Item = function(name, price, count){
-            this.name = name;
-            this.price = price;
-            this.count = count;
-        };
-
-        function test(){
-            var cart = [];
-            var abc = true;
-
-                var a = new Item(document.getElementById("product1Name").value, document.getElementById("product1Price").value, 1);
-                var b = new Item(document.getElementById("product1Name").value, document.getElementById("product1Price").value, 1);
-                cart.push(a);
-                return cart;
-        }
-
-        function addItemToCart(name,price,count){
-            var item = new Item(name,price,count);
-            cart.push(item);
-            console.log(cart);
-            console.log(cart.length);
-        }
-
-        function display(){
-            var cartCopy = [];
-            for (var i in cart){
-                var item = cart[i];
-                var itemCopy = {};
-                for (var p in item) {
-                    itemCopy[p] = item[p];
-                }
-                cartCopy.push(itemCopy);
-            }
-            return cartCopy;
-        }
-
-        function listCart() {
-            for (var i = 0; i < cart.length; i++) {
-                document.write("<tr><td>Name: " + cart[i].name+"</td><td>Price: " + cart[i].price +"</td></tr>");
-            }
-        }
-
-    </script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.js"></script>
 </head>
 <body>
     <table>
