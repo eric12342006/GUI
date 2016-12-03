@@ -9,19 +9,15 @@
 <body>
     <table>
         <tr>
-            <td>Book1<input type="hidden" id="product1Name" value="Book1"></td>
-            <td>$1000<input type="hidden" id="product1Price" value="1000"></td>
-            <td><input id="addToCart1" type="button" value="Add To Cart" onclick="addItemToCart('Book1',1000,3)"/></td>
+            <td>Book1<input type="hidden" id="item1" data-name="Book1" data-price="1000"></td>
+            <td><input id="addToCart1" type="button" value="Add To Cart" onclick="addItemToCart('Book1',1000,1)"/></td>
         </tr>
         <tr>
-            <td>Book2<input type="hidden" id="product2Name" value="Book1"></td>
-            <td>$2000<input type="hidden" id="product2Price" value="1000"></td>
-            <td><input id="addToCart2" type="button" value="Add To Cart" onclick="addItemToCart('Book2',2000,4)"/></td>
-            <input type="button" value="test" onclick="listCart()">
+            <td>Book2<input type="hidden" id="item2" data-name="Book2" data-price="2000"></td>>
+            <td><input id="addToCart2" type="button" value="Add To Cart" onclick="addItemToCart('Book2',2000,1)"/></td>
+            <!--<input type="button" value="test" onclick="listCart()">-->
         </tr>
-        <tr>
-            <a href="testChangePage.html">Change Page</a>
-        </tr>>
+            <a href="shoppingCart.html">Change Page</a>
     </table>
 </body>
 </html>
