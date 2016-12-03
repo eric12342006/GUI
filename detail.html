@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="css/style.css">
+
     <script src="js/jquery.js"></script>
 
     <script src="js/Detail.js"></script>
@@ -38,12 +40,22 @@
 </head>
 
 <body onload="check()">
+
 <div id="itemdiv">
     <button class="catbtn">About us</button>
     <button class="catbtn1">Home</button>
-    <button class="catbtn2">Travels</button>
-    <hr size="2" width="100%" >
+    <button class="catbtn2">Back</button>
+    <hr size="2" width="30%" >
 </div>
+<section class="search-bar">
+    <div class="center-search-bar">
+        <input type="text" name="search" class="search-box" placeholder="Search..">
+        <button class="search-btn" style="vertical-align:middle">
+            <span>Search</span>
+        </button>
+    </div>
+</section>
+<hr size="2" width="100%" >
 
 
 <div class="container">
@@ -51,9 +63,11 @@
         <img src="" id="bk1">
     </div>
     <div id="description">
-        <p id="DesName"> </p>
-        <p id="DesEdit"> </p>
-        <p id="DesPrice"> </p>
+        <p id="DesName" style="color: green"> </p>
+        <p id="DesEdit" style="color: green"> </p>
+        <p id="DesPrice"style="color: green"> </p>
+        <button class="catbtn" style="background-color: grey;padding:10px;color:black;">Get it now</button>
+        <button class="catbtn" style="background-color: grey; padding:10px;color:black;">Shopping Cart</button>
     </div>
 
 </div>
