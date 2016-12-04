@@ -7,7 +7,7 @@
     <script src="js/Detail.js"></script>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="js/Detail.js"></script>
-    <script>
+  <!--  <script>
         var BKName;
         var edit;
         var price;
@@ -20,22 +20,22 @@
             for (var i = 0; i < jsonData.BookDes.length; i++) {
                 var counter = jsonData.BookDes[i];
                 if(counter.BkType==getBT){
-                   BKName="Name: "+counter.Bookname;
-                   edit="Editor: "+counter.Editor;
-                   price="Price: $"+counter.Price;
-                   document.getElementById("DesName").innerHTML=BKName;
-                   document.getElementById("DesEdit").innerHTML=edit;
-                   document.getElementById("DesPrice").innerHTML=price;
+                    BKName="Name: "+counter.Bookname;
+                    edit="Editor: "+counter.Editor;
+                    price="Price: $"+counter.Price;
+                    document.getElementById("DesName").innerHTML=BKName;
+                    document.getElementById("DesEdit").innerHTML=edit;
+                    document.getElementById("DesPrice").innerHTML=price;
                     break;
                 }
             }
         }
-    </script>
+    </script>-->
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 
-<body onload="check()">
+<body> <!--onload="check()"-->
 
 <div id="itemdiv">
     <button class="catbtn">About us</button>
@@ -55,18 +55,46 @@
 
 <div class="container">
     <div id="item">
-        <img src="" id="bk1">
+        <img src="Gift/gift1.jpg" id="bk1">
+        PAPER ONE A4 paper
+        <br>Bonus:900
+        <br>
+        <button>Get it</button>
     </div>
-    <div id="description">
-        <p id="DesName"> </p>
-        <p id="DesEdit"> </p>
-        <p id="DesPrice"> </p>
-       Quantity:<input type="number" name="quantity" min="1" max="5">
-        <br/>
-        <br/>
-        <button class="catbtn" style="background-color: grey;padding:10px;color:black;">Get it now</button>
-        <button class="catbtn" style="background-color: grey; padding:10px;color:black;">Shopping Cart</button>
+
+    <div id="Gift">
+        <img src="Gift/gift2.png" style="width:350px;height: 350px">
+        USB Drive 16GB
+        <br>Bonus:2000
+        <br>
+        <button>Get it</button>
     </div>
+
+    <div id="Gift2">
+        <img src="Gift/gift3.png" style="width:350px;height: 350px">
+        Notebook
+        <br>Bonus:3000
+        <br>
+         <button>Get it</button>
+    </div>
+
+    <div id="Gift3">
+        <img src="Gift/gift4.jpg" style="width:350px;height: 350px">
+        Water Bottles
+        <br>Bonus:1200
+        <br>
+        <button>Get it</button>
+    </div>
+    <!--<div id="description">-->
+        <!--<p id="DesName"> </p>-->
+        <!--<p id="DesEdit"> </p>-->
+        <!--<p id="DesPrice"> </p>-->
+        <!--Quantity:<input type="number" name="quantity" min="1" max="5">-->
+        <!--<br/>-->
+        <!--<br/>-->
+        <!--<button class="catbtn" style="background-color: grey;padding:10px;color:black;">Get it now</button>-->
+        <!--<button class="catbtn" style="background-color: grey; padding:10px;color:black;">Shopping Cart</button>-->
+    <!--</div>-->
 </div>
 
 
