@@ -3,7 +3,34 @@
 <head>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.js"></script>
-
+    <script src="js/Detail.js"></script>
+    <script>
+        var BKName;
+        var edit;
+        var price;
+        function check() {
+            var getSrc = location.search.split("&")[0].replace("?","").split("=")[1];
+            var decode=getSrc.replace(/%20/g, " ");
+            var jsonData = JSON.parse(txt);
+            for (var i = 0; i < jsonData.BookDes.length; i++) {
+                var counter = jsonData.BookDes[i];
+                if(counter.Bookname==decode||counter.Editor==decode){
+                    var sourse=counter.src;
+                    var link="detail.html?bk="+counter.src+"&BT="+counter.BkType;
+                    $("#img1").attr("src",sourse);
+                    $("#bk1").attr("href",link);
+                    $("#img2").attr("hidden",true);
+                    $("#img3").attr("hidden",true);
+                    $("#img4").attr("hidden",true);
+                    $("#img5").attr("hidden",true);
+                    $("#img6").attr("hidden",true);
+                    $("#img7").attr("hidden",true);
+                    $("#img8").attr("hidden",true);
+                    break;
+                }
+            }
+        }
+    </script>
     <meta charset="UTF-8">
     <!-- css import-->
     <link rel="stylesheet" href="css/style.css">

@@ -30,6 +30,11 @@
                 }
             }
         }
+        function change(){
+            var fuck=document.getElementById("getEle").value;
+            var action="Itemshow.html?bk="+fuck;
+            document.location.href = action;
+        }
     </script>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -45,8 +50,8 @@
 </div>
 <section class="search-bar">
     <div class="center-search-bar">
-        <input type="text" name="search" class="search-box" placeholder="Search..">
-        <button class="search-btn" style="vertical-align:middle">
+        <input type="text" id="getEle" name="search" class="search-box" placeholder="Search..">
+        <button class="search-btn" style="vertical-align:middle" onclick="change()">
             <span>Search</span>
         </button>
     </div>
