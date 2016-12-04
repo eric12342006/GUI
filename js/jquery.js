@@ -181,6 +181,9 @@ function saveAsOrder(){
     var check = localStorage.getItem('order');
     oldOrder.push(cartArray);
     console.log(check);
+    var totalPrice = JSON.parse(localStorage.getItem("totalPrice"));
+    var bonusPoint = Number(totalPrice)/10;
+    localStorage.setItem("bonusPoint",JSON.stringify(bonusPoint));
 
    var abc = [];
    localStorage.setItem("shoppingCart",JSON.stringify(abc));
@@ -202,5 +205,24 @@ function displayOrder(){
 function loadCart(){
     cart = JSON.parse(localStorage.getItem("shoppingCart"));
     console.log(cart);
+}
+
+function loadBonusPoint(){
+    var bonusPoint = JSON.parse(localStorage.getItem("bonusPoint"));
+    localStorage.setItem("bonusPoint",JSON.stringify(bonusPoint));
+    $("#BonusPoint").html(bonusPoint);
+    console.log(bonusPoint);
+}
+
+function getGift(bonusPoint){
+    var yourPoint = JSON.parse(localStorage.getItem("bonusPoint"));
+    if(yourPoint < bonusPoint){
+        alert("Your point is not enough");
+    }else{
+        yourPoint = Number(yourPoint)-Number(bonusPoint);
+        localStorage.setItem("bonusPoint",JSON.stringify(yourPoint));
+        alert("Changed Gift");
+        location.reload();
+    }
 }
 

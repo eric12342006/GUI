@@ -31,6 +31,12 @@
             }
         }
     </script>-->
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            loadBonusPoint();
+        });
+    </script>
+
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
@@ -44,7 +50,7 @@
     <hr size="2" width="30%" >
 </div>
 
-<h3>Your Current Bonus Point:fuck</h3>               <!--Bonus point-->
+<h3>Your Current Bonus Point:  <span id="BonusPoint"></span></h3>              <!--Bonus point-->
 
 <hr size="2" width="100%" >
 
@@ -52,33 +58,33 @@
     <div id="item">
         <img src="Gift/gift1.jpg" id="bk1">
         PAPER ONE A4 paper
-        <br>Bonus:900
+        <br>Bonus:10
         <br>
-        <button>Get it</button>
+        <button onclick="getGift(10)">Get it</button>
     </div>
 
     <div id="Gift">
         <img src="Gift/gift2.png" style="width:350px;height: 350px">
         USB Drive 16GB
-        <br>Bonus:2000
+        <br>Bonus:200
         <br>
-        <button>Get it</button>
+        <button onclick="getGift(200)">Get it</button>
     </div>
 
     <div id="Gift2">
         <img src="Gift/gift3.png" style="width:350px;height: 350px">
         Notebook
-        <br>Bonus:3000
+        <br>Bonus:300
         <br>
-         <button>Get it</button>
+        <button onclick="getGift(300)">Get it</button>
     </div>
 
     <div id="Gift3">
         <img src="Gift/gift4.jpg" style="width:350px;height: 350px">
         Water Bottles
-        <br>Bonus:1200
+        <br>Bonus:120
         <br>
-        <button>Get it</button>
+        <button onclick="getGift(120)">Get it</button>
     </div>
     <!--<div id="description">-->
         <!--<p id="DesName"> </p>-->
