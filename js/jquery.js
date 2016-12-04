@@ -185,11 +185,13 @@ function saveAsOrder(){
 
     //var cartArray =  JSON.parse(localStorage.getItem("shoppingCart"));
    // console.log(cartArray);
-    var 
+    var oldOrder = JSON.parse(localStorage.getItem("order"));
+    oldOrder.push(oldOrder);
 
     var cartArray =  JSON.parse(localStorage.getItem("shoppingCart"));
     localStorage.setItem("order",JSON.stringify(cartArray));
     var check = localStorage.getItem('order');
+    oldOrder.push(cartArray);
     console.log(check);
 
    var abc = [];
