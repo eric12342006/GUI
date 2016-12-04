@@ -81,7 +81,7 @@
             for (var i = 0; i < jsonData.BookDes.length; i++) {
                 var counter = jsonData.BookDes[i];
                 if(counter.BkType==getBT){
-                    BKName="Name: "+counter.Bookname;
+                    BKName=counter.Bookname;
                     break;
                 }
             }
@@ -95,7 +95,7 @@
             for (var i = 0; i < jsonData.BookDes.length; i++) {
                 var counter = jsonData.BookDes[i];
                 if(counter.BkType==getBT){
-                    edit="Editor: "+counter.Editor;
+                    edit=counter.Editor;
                     break;
                 }
             }
@@ -109,7 +109,7 @@
             for (var i = 0; i < jsonData.BookDes.length; i++) {
                 var counter = jsonData.BookDes[i];
                 if(counter.BkType==getBT){
-                    price="Price: $"+counter.Price;
+                    price=counter.Price;
                     break;
                 }
             }

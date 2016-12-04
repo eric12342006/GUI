@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            saveAsOrder();
+            loadCart();
+            displayOrder();
+        });
+    </script>
+    <title>Order</title>
 </head>
 <body>
-    HIHIHI
+<h1>Order</h1>
+<div>
+    <ul id="show-cart">
+
+    </ul>
+    <div>Total Cart:$<span id="total-cart"></span></div>
+</div>
 </body>
 </html>
