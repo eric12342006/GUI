@@ -1,8 +1,58 @@
 body{
-    margin: 20px;
+    background: #76b852;
+    font-size: 22px;
+    margin: auto;
+
 }
 
-.wrapper{
-    width: 1140px;
-    margin: 0 auto;
+.divShopping{
+    width:440px;
+    height: 400px;
+    background-color: white;
+    text-align: center;
+    margin: auto;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+    border-bottom: 2px solid #ccc;
+}
+
+
+
+
+
+li a:hover {
+    font-size: 30px;
+    background: #f6f6f6;
 }
