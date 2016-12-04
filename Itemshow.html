@@ -3,24 +3,7 @@
 <head>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.js"></script>
-    <script>
-        var BKName;
-        var edit;
-        var price;
-        function check() {
-            var getSrc = location.search.split("&")[0].replace("?","").split("=")[1];   //User input
 
-            var jsonData = JSON.parse(txt);
-            for (var i = 0; i < jsonData.BookDes.length; i++) {
-                var counter = jsonData.BookDes[i];
-                if(counter.Bookname==getSrc){           //Same as bookname,editor
-                    var sourse=counter.src;
-                    $("#bk1").attr("src",sourse);
-                    break;
-                }
-            }
-        }
-    </script>
     <meta charset="UTF-8">
     <!-- css import-->
     <link rel="stylesheet" href="css/style.css">
