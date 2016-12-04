@@ -110,6 +110,7 @@ function addItemToCart(name,price,count){
 
     totalCart();
     saveCart();
+
 }
 
 function saveCart(){

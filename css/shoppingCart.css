@@ -2,15 +2,18 @@ body{
     background: #76b852;
     font-size: 22px;
     margin: auto;
+    opacity: 0.9;
+    padding-top: 200px;
 
 }
 
 .divShopping{
-    width:440px;
-    height: 400px;
+    width:500px;
+    height: auto;
     background-color: white;
     text-align: center;
     margin: auto;
+
 }
 .button {
     background-color: #4CAF50; /* Green */
