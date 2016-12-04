@@ -70,53 +70,27 @@ $(document).ready(function(){
 
 
 /*********************************/
-var cart = [];
-var duplicate = false;
 
-var Item = function(name, price, count){
-    this.name = name;
-    this.price = price;
-    this.count = count;
-};
-
-function addItemToCart(name,price,count){
-    console.log(name);
-    console.log(cart.length); //1,2
-    if(cart.length == 0){
-        var item = new Item(name, price, count);
-        cart.push(item);
-        console.log(cart);
-    }else {
-        for (var i = 0; i < cart.length; i++) {
-            if (cart[i].name == name) {
-                var tempCount = Number(cart[i].count) + count;
-                cart[i].count = tempCount;
-                console.log(cart);
-                duplicate = true;
+function removeItemFromCart(name){ //Remove one item
+    for (var i in cart){
+        if(cart[i].name === name){
+            cart[i].count --;
+            if(cart[i].count === 0){
+                cart.splice(i, 1);
             }
-        }
-        if(!duplicate){
-            var item = new Item(name, price, count);
-            cart.push(item);
-            console.log(cart);
+            break;
         }
     }
-
-    totalCart();
-    saveCart();
 }
 
-function saveCart(){
-    localStorage.setItem("shoppingCart",JSON.stringify(cart));
-}
-
-/*function listCart() {
-    cart =  JSON.parse(localStorage.getItem("shoppingCart"));
-    console.log(cart);
-    for (var i = 0; i < cart.length; i++) {
-        document.write("<tr><td>Name: " + cart[i].name+"</td><td>Price: " + cart[i].price +"</td></tr>");
+function removeAllItemFromCart(name){ // removes all item with name
+    for(var i in cart){
+        if(cart[i].name === name){
+            cart.splice(i, 1);
+            break;
+        }
     }
-}*/
+}
 
 function listCart(){
     var cartCopy = [];
@@ -159,5 +133,15 @@ function totalCart(){
     localStorage.setItem("totalPrice",JSON.stringify(totalCost));
     console.log(totalCost);
     return totalCost;
+}
+
+function getCart(){
+    var cartArray =  JSON.parse(localStorage.getItem("shoppingCart"));
+    return cartArray();
+}
+
+function loadCart(){
+    cart = JSON.parse(localStorage.getItem("shoppingCart"));
+    console.log(cart);
 }
 

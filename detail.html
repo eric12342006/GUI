@@ -5,12 +5,24 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery.js"></script>
     <script src="js/Detail.js"></script>
-    <script src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="js/Detail.js"></script>
-    <script>
+    <script type="text/javascript">
         var BKName;
         var edit;
         var price;
+        var cart = [];
+        var duplicate = false;
+
+        var Item = function(name, price, count){
+            this.name = name;
+            this.price = price;
+            this.count = count;
+        };
+
+        $( document ).ready(function() {
+            loadCart();
+        });
+
         function check() {
             var getSrc = location.search.split("&")[0].replace("?","").split("=")[1];
             var getBT = location.search.split("&")[1].replace("?","").split("=")[1];
@@ -35,6 +47,54 @@
             var action="Itemshow.html?bk="+fuck;
             document.location.href = action;
         }
+        function getName(){
+            var getSrc = location.search.split("&")[0].replace("?","").split("=")[1];
+            var getBT = location.search.split("&")[1].replace("?","").split("=")[1];
+            var jsonData = JSON.parse(txt);
+            for (var i = 0; i < jsonData.BookDes.length; i++) {
+                var counter = jsonData.BookDes[i];
+                if(counter.BkType==getBT){
+                    BKName="Name: "+counter.Bookname;
+                    break;
+                }
+            }
+            console.log(BKName);
+            return BKName;
+        }
+        function getEdit(){
+            var getSrc = location.search.split("&")[0].replace("?","").split("=")[1];
+            var getBT = location.search.split("&")[1].replace("?","").split("=")[1];
+            var jsonData = JSON.parse(txt);
+            for (var i = 0; i < jsonData.BookDes.length; i++) {
+                var counter = jsonData.BookDes[i];
+                if(counter.BkType==getBT){
+                    edit="Editor: "+counter.Editor;
+                    break;
+                }
+            }
+            console.log(edit);
+            return edit;
+        }
+        function getPrice(){
+            var getSrc = location.search.split("&")[0].replace("?","").split("=")[1];
+            var getBT = location.search.split("&")[1].replace("?","").split("=")[1];
+            var jsonData = JSON.parse(txt);
+            for (var i = 0; i < jsonData.BookDes.length; i++) {
+                var counter = jsonData.BookDes[i];
+                if(counter.BkType==getBT){
+                    price="Price: $"+counter.Price;
+                    break;
+                }
+            }
+            console.log(price);
+            return price;
+        }
+        function getCount(){
+            var number;
+            number = document.getElementById("quantity").value;
+            console.log(number);
+            return number;
+        }
     </script>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -45,7 +105,7 @@
 <div id="itemdiv">
     <button class="catbtn">About us</button>
     <button class="catbtn1" onclick="self.location.href='index.html'">Home</button>
-    <button class="catbtn2" onclick="self.location.href='Itemshow.html'">Back</button>
+    <button class="catbtn2" onclick="self.location.href='Itemshow.html'" onclick="saveCart()">Back</button>
     <hr size="2" width="30%" >
 </div>
 <section class="search-bar">
@@ -66,11 +126,12 @@
         <p id="DesName"> </p>
         <p id="DesEdit"> </p>
         <p id="DesPrice"> </p>
-       Quantity:<input type="number" name="quantity" min="1" max="5">
+       Quantity:<input type="number" id="quantity" name="quantity" min="1" max="5" onchange="getCount()">
         <br/>
         <br/>
         <button class="catbtn" style="background-color: grey;padding:10px;color:black;">Get it now</button>
-        <button class="catbtn" style="background-color: grey; padding:10px;color:black;">Shopping Cart</button>
+        <button class="catbtn" style="background-color: grey; padding:10px;color:black;" onclick="addItemToCart(getName(),getPrice(),getCount())">Shopping Cart</button>
+        <a href="shoppingCart.html">Change Page</a>
     </div>
 </div>
 
