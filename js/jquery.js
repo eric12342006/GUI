@@ -135,28 +135,6 @@ function removeAllItemFromCart(name){ // removes all item with name
     location.reload();
 }
 
-function listCart(){
-    var cartCopy = [];
-    for(var i in cart){
-        var item = cart[i];
-        var itemCopy = {};
-        for(var p in item){
-            itemCopy[p] = item[p];
-        }
-        cartCopy.push(itemCopy);
-    }
-    return cartCopy;
-    console.log(cartCopy);
-}
-
-$(".add-to-cart").click(function(event){
-    event.preventDefault();
-    var name = $(this).attr();
-    var price = Number($(this).attr());
-
-    addItemToCart(name,price,1);
-});
-
 function displayCart(){
     var cartArray =  JSON.parse(localStorage.getItem("shoppingCart"));
     var totalPrice = JSON.parse(localStorage.getItem("totalPrice"));
@@ -180,11 +158,6 @@ function totalCart(){
     return totalCost;
 }
 
-<<<<<<< HEAD
-function getCart(){
-    var cartArray =  JSON.parse(localStorage.getItem("shoppingCart"));
-    return cartArray();
-=======
 function loadCart(){
     cart = JSON.parse(localStorage.getItem("shoppingCart"));
     console.log(cart);
@@ -211,7 +184,19 @@ function saveAsOrder(){
 
    var abc = [];
    localStorage.setItem("shoppingCart",JSON.stringify(abc));
->>>>>>> origin/master
+}
+
+function displayOrder(){
+    var orderArray =  JSON.parse(localStorage.getItem("order"));
+    var totalPrice = JSON.parse(localStorage.getItem("totalPrice"));
+    var output = "";
+    for (var i in orderArray){
+        tempName = orderArray[i].name;
+        console.log(tempName);
+        output += "<li>"+orderArray[i].name+" "+orderArray[i].price+" "+orderArray[i].count+"</li>";
+    }
+    $("#show-cart").html(output);
+    $("#total-cart").html(totalPrice);
 }
 
 function loadCart(){
