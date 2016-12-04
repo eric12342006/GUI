@@ -180,9 +180,38 @@ function totalCart(){
     return totalCost;
 }
 
+<<<<<<< HEAD
 function getCart(){
     var cartArray =  JSON.parse(localStorage.getItem("shoppingCart"));
     return cartArray();
+=======
+function loadCart(){
+    cart = JSON.parse(localStorage.getItem("shoppingCart"));
+    console.log(cart);
+    totalCart();
+}
+
+function saveAsOrder(){
+    //var check = localStorage.getItem('Order');
+   // if (typeof check !== 'undefined' && check !== null){
+    //}
+   // var abc = [];
+    //localStorage.setItem("shoppingCart",JSON.stringify(abc));
+
+    //var cartArray =  JSON.parse(localStorage.getItem("shoppingCart"));
+   // console.log(cartArray);
+    var oldOrder = JSON.parse(localStorage.getItem("order"));
+    oldOrder.push(oldOrder);
+
+    var cartArray =  JSON.parse(localStorage.getItem("shoppingCart"));
+    localStorage.setItem("order",JSON.stringify(cartArray));
+    var check = localStorage.getItem('order');
+    oldOrder.push(cartArray);
+    console.log(check);
+
+   var abc = [];
+   localStorage.setItem("shoppingCart",JSON.stringify(abc));
+>>>>>>> origin/master
 }
 
 function loadCart(){
