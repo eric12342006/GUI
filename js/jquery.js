@@ -68,18 +68,11 @@ $(document).ready(function(){
 });
 
 
-function getCurrentDay(){
-    var currentdate = new Date();
-    return currentdate.toDateString();
-}
-
-
 
 /*********************************/
 var cart = [];
 var duplicate = false;
 var tempName;
-var totalCost = 0;
 
 var Item = function(name, price, count){
     this.name = name;
@@ -110,13 +103,11 @@ function addItemToCart(name,price,count){
 
     totalCart();
     saveCart();
-
 }
 
 function saveCart(){
     localStorage.setItem("shoppingCart",JSON.stringify(cart));
 }
-
 
 function removeItemFromCart(name){ //Remove one item
     for (var i in cart){
@@ -144,24 +135,43 @@ function removeAllItemFromCart(name){ // removes all item with name
     location.reload();
 }
 
+function listCart(){
+    var cartCopy = [];
+    for(var i in cart){
+        var item = cart[i];
+        var itemCopy = {};
+        for(var p in item){
+            itemCopy[p] = item[p];
+        }
+        cartCopy.push(itemCopy);
+    }
+    return cartCopy;
+    console.log(cartCopy);
+}
+
+$(".add-to-cart").click(function(event){
+    event.preventDefault();
+    var name = $(this).attr();
+    var price = Number($(this).attr());
+
+    addItemToCart(name,price,1);
+});
+
 function displayCart(){
     var cartArray =  JSON.parse(localStorage.getItem("shoppingCart"));
     var totalPrice = JSON.parse(localStorage.getItem("totalPrice"));
     var output = "";
-    var testTotalPrice = 0;
     for (var i in cartArray){
        tempName = cartArray[i].name;
-       testTotalPrice += Number(cartArray[i].price) * Number(cartArray[i].count);
-       output += "<li>"+cartArray[i].name+" "+cartArray[i].price+" "+cartArray[i].count+"<input type='button' value='DELETE ONE' onclick='removeItemFromCart(tempName)'>"+"<input type='button' value='DELETE ALL' onclick='removeAllItemFromCart(tempName)'>"+"</li>";
        console.log(tempName);
-       output += "<li>"+cartArray[i].name+" "+cartArray[i].price+" "+cartArray[i].count+"<br/><input type='button' value='DELETE ONE QUANTITY' class='button1' onclick='removeItemFromCart(tempName)'><br/>"+"<input type='button' value='DELETE ITEM' class='button1' onclick='removeAllItemFromCart(tempName)'>"+"</li>";
+       output += "<li>"+cartArray[i].name+" "+cartArray[i].price+" "+cartArray[i].count+"<input type='button' value='DELETE ONE' onclick='removeItemFromCart(tempName)'>"+"<input type='button' value='DELETE ALL' onclick='removeAllItemFromCart(tempName)'>"+"</li>";
     }
     $("#show-cart").html(output);
-    $("#total-cart").html(testTotalPrice);
+    $("#total-cart").html(totalPrice);
 }
 
 function totalCart(){
-    totalCost = 0;
+    var totalCost = 0;
     for (var i in cart){
             totalCost += cart[i].price * cart[i].count;
     }
@@ -170,43 +180,13 @@ function totalCart(){
     return totalCost;
 }
 
+function getCart(){
+    var cartArray =  JSON.parse(localStorage.getItem("shoppingCart"));
+    return cartArray();
+}
+
 function loadCart(){
     cart = JSON.parse(localStorage.getItem("shoppingCart"));
     console.log(cart);
-    totalCart();
-}
-
-function saveAsOrder(){
-    //var check = localStorage.getItem('Order');
-   // if (typeof check !== 'undefined' && check !== null){
-    //}
-   // var abc = [];
-    //localStorage.setItem("shoppingCart",JSON.stringify(abc));
-
-    //var cartArray =  JSON.parse(localStorage.getItem("shoppingCart"));
-   // console.log(cartArray);
-    var 
-
-    var cartArray =  JSON.parse(localStorage.getItem("shoppingCart"));
-    localStorage.setItem("order",JSON.stringify(cartArray));
-    var check = localStorage.getItem('order');
-    console.log(check);
-
-   var abc = [];
-   localStorage.setItem("shoppingCart",JSON.stringify(abc));
-}
-
-function displayOrder(){
-    var orderArray =  JSON.parse(localStorage.getItem("order"));
-    console.log(orderArray);
-    var totalPrice = JSON.parse(localStorage.getItem("totalPrice"));
-    var output = "";
-    for (var i in orderArray){
-        tempName = orderArray[i].name;
-        console.log(tempName);
-        output += "<li>"+orderArray[i].name+" "+orderArray[i].price+" "+orderArray[i].count+" "+getCurrentDay()+"</li>";
-    }
-    $("#show-cart").html(output);
-    $("#total-cart").html(totalPrice);
 }
 
