@@ -72,8 +72,7 @@ $(document).ready(function(){
 /*********************************/
 var cart = [];
 var duplicate = false;
-var tempName=[];
-var num = 0;
+var tempName;
 
 var Item = function(name, price, count){
     this.name = name;
@@ -120,8 +119,8 @@ function removeItemFromCart(name){ //Remove one item
             break;
         }
     }
-    //saveCart();
-    //location.reload();
+    saveCart();
+    location.reload();
 }
 
 function removeAllItemFromCart(name){ // removes all item with name
@@ -132,8 +131,8 @@ function removeAllItemFromCart(name){ // removes all item with name
             break;
         }
     }
-    //saveCart();
-    //location.reload();
+    saveCart();
+    location.reload();
 }
 
 function listCart(){
@@ -163,12 +162,10 @@ function displayCart(){
     var totalPrice = JSON.parse(localStorage.getItem("totalPrice"));
     var output = "";
     for (var i in cartArray){
-        tempName.push(cartArray[i].name);
-        num++;
-        console.log(tempName);
-        output += "<li>"+cartArray[i].name+" "+cartArray[i].price+" "+cartArray[i].count+"<input type='button' value='DELETE' onclick='removeItemFromCart(tempName[num])'>"+"</li>";
+       tempName = cartArray[i].name;
+       console.log(tempName);
+       output += "<li>"+cartArray[i].name+" "+cartArray[i].price+" "+cartArray[i].count+"<input type='button' value='DELETE ONE' onclick='removeItemFromCart(tempName)'>"+"<input type='button' value='DELETE ALL' onclick='removeAllItemFromCart(tempName)'>"+"</li>";
     }
-    num = 0;
     $("#show-cart").html(output);
     $("#total-cart").html(totalPrice);
 }
