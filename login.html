@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="css/registerLogin.css">
-
+    <!-- css import-->
     <script type="text/javascript">
 
         function login(){
@@ -22,11 +22,12 @@
 <body>
 <div class="container">
     <form id="login" class="login" onsubmit="return login()">
-        <div class="header">
-            <h1>Login</h1>
-        </div>
-        <input type="text" id="username" name="username" placeholder="User Name" required="required" />
-        <input type="password" id="password" name="password" placeholder="Password" required="required"/>
+
+       Account: <input type="text" id="username" name="username" placeholder="User Name" required="required" />
+        <br/>
+        <br/>
+        Password:<input type="password" id="password" name="password" placeholder="Password" required="required"/>
+        <br/>
         <br/>
             <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
         <br/>
