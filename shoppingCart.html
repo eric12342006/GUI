@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/shoppingCart.css">
     <meta charset="UTF-8">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.js"></script>
     <script type="text/javascript">
+
         $( document ).ready(function() {
             loadCart();
             displayCart();
@@ -13,16 +15,18 @@
 <title>Shopping Cart</title>
 </head>
 <body>
-    <h1>Shopping Cart</h1>
+<div class="divShopping">
+    <h1 style="color: grey;">SHOPPING CART</h1>
 
-    <button type="button" onclick="displayCart()">Show</button>
+    <button type="button" onclick="displayCart()" class="button1">Show</button>
     <a href="Itemshow.html">Change Page</a>
     <div>
         <ul id="show-cart">
 
         </ul>
         <div>Total Cart:$<span id="total-cart"></span></div>
-        <div><input type="submit" value="ORDER" onclick="javascript:window.location.href='order.html'"></div>
+        <div><input class="button1" type="submit" value="ORDER" onclick="javascript:window.location.href='order.html'"></div>
     </div>
+</div>
 </body>
 </html>

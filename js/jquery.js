@@ -150,8 +150,13 @@ function displayCart(){
     var testTotalPrice = 0;
     for (var i in cartArray){
        tempName = cartArray[i].name;
+<<<<<<< HEAD
        testTotalPrice += Number(cartArray[i].price) * Number(cartArray[i].count);
        output += "<li>"+cartArray[i].name+" "+cartArray[i].price+" "+cartArray[i].count+"<input type='button' value='DELETE ONE' onclick='removeItemFromCart(tempName)'>"+"<input type='button' value='DELETE ALL' onclick='removeAllItemFromCart(tempName)'>"+"</li>";
+=======
+       console.log(tempName);
+       output += "<li>"+cartArray[i].name+" "+cartArray[i].price+" "+cartArray[i].count+"<br/><input type='button' value='DELETE ONE QUANTITY' class='button1' onclick='removeItemFromCart(tempName)'><br/>"+"<input type='button' value='DELETE ITEM' class='button1' onclick='removeAllItemFromCart(tempName)'>"+"</li>";
+>>>>>>> d503b86191bdba347ac39bf1aeef7eadb8296da1
     }
     $("#show-cart").html(output);
     $("#total-cart").html(testTotalPrice);
