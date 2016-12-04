@@ -13,15 +13,42 @@
         var cart = [];
         var duplicate = false;
 
+        loadCart();
+
         var Item = function(name, price, count){
             this.name = name;
             this.price = price;
             this.count = count;
         };
 
-        $( document ).ready(function() {
-            loadCart();
-        });
+        function addItemToCart(name,price,count){
+            if(cart.length == 0){
+                var item = new Item(name, price, count);
+                cart.push(item);
+                console.log(cart);
+            }else {
+                for (var i = 0; i < cart.length; i++) {
+                    if (cart[i].name == name) {
+                        var tempCount = Number(cart[i].count) + Number(count);
+                        cart[i].count = tempCount;
+                        console.log(cart);
+                        duplicate = true;
+                    }
+                }
+                if(!duplicate){
+                    var item = new Item(name, price, count);
+                    cart.push(item);
+                    console.log(cart);
+                }
+            }
+
+            totalCart();
+            saveCart();
+        }
+
+        function saveCart(){
+            localStorage.setItem("shoppingCart",JSON.stringify(cart));
+        }
 
         function check() {
             var getSrc = location.search.split("&")[0].replace("?","").split("=")[1];

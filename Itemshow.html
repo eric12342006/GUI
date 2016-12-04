@@ -4,10 +4,15 @@
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/Detail.js"></script>
-    <script>
+    <script type="text/javascript">
         var BKName;
         var edit;
         var price;
+
+        $( document ).ready(function() {
+            loadCart();
+        });
+
         function check() {
             var getSrc = location.search.split("&")[0].replace("?","").split("=")[1];
             var decode=getSrc.replace(/%20/g, " ");

@@ -70,6 +70,45 @@ $(document).ready(function(){
 
 
 /*********************************/
+var cart = [];
+var duplicate = false;
+var tempName=[];
+var num = 0;
+
+var Item = function(name, price, count){
+    this.name = name;
+    this.price = price;
+    this.count = count;
+};
+
+function addItemToCart(name,price,count){
+    if(cart.length == 0){
+        var item = new Item(name, price, count);
+        cart.push(item);
+        console.log(cart);
+    }else {
+        for (var i = 0; i < cart.length; i++) {
+            if (cart[i].name == name) {
+                var tempCount = Number(cart[i].count) + count;
+                cart[i].count = tempCount;
+                console.log(cart);
+                duplicate = true;
+            }
+        }
+        if(!duplicate){
+            var item = new Item(name, price, count);
+            cart.push(item);
+            console.log(cart);
+        }
+    }
+
+    totalCart();
+    saveCart();
+}
+
+function saveCart(){
+    localStorage.setItem("shoppingCart",JSON.stringify(cart));
+}
 
 function removeItemFromCart(name){ //Remove one item
     for (var i in cart){
@@ -81,15 +120,20 @@ function removeItemFromCart(name){ //Remove one item
             break;
         }
     }
+    //saveCart();
+    //location.reload();
 }
 
 function removeAllItemFromCart(name){ // removes all item with name
+    console.log(name);
     for(var i in cart){
         if(cart[i].name === name){
             cart.splice(i, 1);
             break;
         }
     }
+    //saveCart();
+    //location.reload();
 }
 
 function listCart(){
@@ -119,8 +163,12 @@ function displayCart(){
     var totalPrice = JSON.parse(localStorage.getItem("totalPrice"));
     var output = "";
     for (var i in cartArray){
-        output += "<li>"+cartArray[i].name+" "+cartArray[i].price+" "+cartArray[i].count+"</li>";
+        tempName.push(cartArray[i].name);
+        num++;
+        console.log(tempName);
+        output += "<li>"+cartArray[i].name+" "+cartArray[i].price+" "+cartArray[i].count+"<input type='button' value='DELETE' onclick='removeItemFromCart(tempName[num])'>"+"</li>";
     }
+    num = 0;
     $("#show-cart").html(output);
     $("#total-cart").html(totalPrice);
 }
