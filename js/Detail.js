@@ -5,7 +5,7 @@
 User1 = '[{"ac" : "abc", "pwd" : "123"}]';
 
 txt = '{"BookDes":[' +
-    '{"BkType":"TB1","Bookname":"iOS SDK Programming","Editor":"James Brannan, Blake Ward","Price":"304" },' +
+    '{"BkType":"TB1","Bookname":"iOS SDK Programming","Editor":"James Brannan, Blake Ward","Price":"304","src":"textbook/textbook1.jpg" },' +
     '{"BkType":"TB2","Bookname":"Programming in objective-c 2.0","Editor":"Gary Rosenzweig","Price":"400" },' +
     '{"BkType":"TB3","Bookname":"IELTS 10","Editor":"Cambridge English","Price":"209" },' +
     '{"BkType":"TB4","Bookname":"Learning iPad Programming","Editor":"Kirby Turner","Price":"320" },' +
